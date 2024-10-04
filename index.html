@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Subreddit Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Reddit Subreddit Viewer</h1>
+    <div id="controls">
+        <input type="text" id="subreddit" placeholder="Enter subreddit name" value="aww">
+        <button id="loadPosts">🔍 Load Posts</button>
+    </div>
+    <div id="top-subreddits">
+        <h2>Top Subreddits</h2>
+        <ul>
+            <li><a href="#" data-subreddit="aww">aww</a></li>
+            <li><a href="#" data-subreddit="funny">funny</a></li>
+            <li><a href="#" data-subreddit="gaming">gaming</a></li>
+            <li><a href="#" data-subreddit="pics">pics</a></li>
+            <li><a href="#" data-subreddit="science">science</a></li>
+            <li><a href="#" data-subreddit="technology">technology</a></li>
+            <li><a href="#" data-subreddit="worldnews">worldnews</a></li>
+            <li><a href="#" data-subreddit="movies">movies</a></li>
+            <li><a href="#" data-subreddit="Music">Music</a></li>
+            <li><a href="#" data-subreddit="news">news</a></li>
+        </ul>
+    </div>
+    <div id="posts"></div>
+    <script src="script.js"></script>
+</body>
+</html>
