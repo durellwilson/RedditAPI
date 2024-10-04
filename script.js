@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const topSubredditLinks = document.querySelectorAll('#top-subreddits a');
 
     const fetchPosts = (subreddit) => {
+        loadingSpinner.style.display = 'block'; // Show spinner
         fetch(`https://www.reddit.com/r/${subreddit}/.json`)
         .then(response => response.json())
         .then(data => {
@@ -35,7 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 postsContainer.appendChild(postElement);
             });
         })
-        .catch(error => console.error('Error fetching data:', error));
+        .catch(error => console.error('Error fetching data:', error))
+        .finally(() => {
+            loadingSpinner.style.display = 'none'; // Hide spinner
+        });
     };
 
     loadPostsButton.addEventListener('click', () => {

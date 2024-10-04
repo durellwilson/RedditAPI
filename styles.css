@@ -80,15 +80,25 @@ h1, h2 {
     margin: 10px;
     padding: 10px;
     width: 300px;
+    height: 400px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: space-between;
 }
-
+.post h2 {
+    max-height: 3.6em; /* Limit to 3 lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
 .post img {
     max-width: 100%;
+    max-height: 200px;
     border-radius: 8px;
     margin-bottom: 10px;
 }
@@ -104,4 +114,19 @@ h1, h2 {
     text-decoration: underline;
     color: #4db8ff;
     transition: color 0.3s ease;
+}
+.spinner {
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid #0077cc; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+    display: none; 
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
